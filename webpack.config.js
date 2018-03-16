@@ -1,14 +1,8 @@
 const path = require("path");
-const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  entry: [
-    "react-hot-loader/patch",
-    "webpack-dev-server/client?http://localhost:5000",
-    "webpack/hot/only-dev-server",
-    "./src/index.js",
-  ],
+  entry: "./src/index.js",
   output: {
     filename: "bundle.js",
     path: path.join(__dirname, "dist"),
@@ -37,13 +31,10 @@ module.exports = {
     ],
   },
   devServer: {
-    hot: true,
     contentBase: path.resolve(__dirname, "dist"),
     port: 5000,
   },
   plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: "./dist/index.html",
       filename: "index.html",
