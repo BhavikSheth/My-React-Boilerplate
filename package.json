@@ -62,6 +62,7 @@
     "node-sass": "^4.7.2",
     "react-hot-loader": "^3.1.3",
     "react-test-renderer": "^16.2.0",
+    "redux-immutable-state-invariant": "^2.1.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
     "webpack": "^3.10.0",
@@ -123,6 +124,9 @@
             ".jsx"
           ]
         }
+      ],
+      "import/core-modules": [
+        "redux-immutable-state-invariant"
       ]
     }
   }
